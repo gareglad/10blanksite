@@ -72,8 +72,8 @@ button#level-up-btn {
           </div>
       <!-- <h2>Pixel Quest</h2> -->
       <div class="gold-level d-flex justify-content-between mt-3">
-        <p>Gold: <span id="gold">0</span></p>
-        <button type="button" class="btn btn-primary" id="level-up-btn">Level Up</button>
+        <p>Gold: <span id="gold">100</span></p>
+        <button type="button" class="btn btn-primary" id="level-up-btn">Level Up (10)</button>
         
       </div>
      
@@ -91,8 +91,8 @@ button#level-up-btn {
   <script>
     $(document).ready(function() {
   let characterLevel = 1;
-  let gold = 0;
-
+  let gold = 100;
+  let cost = 10;
   // Update character level and gold display
   function updateStats() {
     $('#level').text(characterLevel);
@@ -108,6 +108,8 @@ button#level-up-btn {
   // Simulate leveling up
   function levelUp() {
     characterLevel++;
+    gold = gold - 10;
+    $('#gold').text(gold);
     updateStats();
   }
 
