@@ -64,6 +64,9 @@ button#level-up-btn {
   
 </head>
 <body class="d-flex justify-content-center align-self-center">
+ <?php 
+ echo 'hello';
+?>
   <div class="game-container align-self-center">
     <div class="game-info">
         <div class="card-header d-flex justify-content-between">
